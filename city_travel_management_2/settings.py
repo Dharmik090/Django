@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-87sd15j07m$(383yyobq3ds@n6-lvnn0%7(ovvvy8zz_k67r^m
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://city-travel-management-2.vercel.app/']
+ALLOWED_HOSTS = ['.vercel.app']
 
 
 # Application definition
@@ -87,11 +87,11 @@ DATABASES = {
 
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'ctm2',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': '3306'
+        'NAME': os.getenv('ctm2'),
+        'USER': os.getenv('root'),
+        'PASSWORD': os.getenv(''),
+        'HOST': os.getenv('localhost'),
+        'PORT': os.getenv('3306')
     }
     
     # 'default': {
